@@ -1,12 +1,13 @@
+%define		_name	xfce4-weather
 Summary:	A weather plugin for the Xfce panel
 Summary(pl):	Wtyczka panelu Xfce pokazuj±ca pogodê
 Name:		xfce4-weather-plugin
-Version:	0.3.9.1
-Release:	2
+Version:	0.4.0
+Release:	1
 License:	BSD
 Group:		X11/Applications
-Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.bz2
-# Source0-md5:	a124a22ba65d0667f513ad6fae83c626
+Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.gz
+# Source0-md5:	18f7171b73ad264671c472f6e0d3d251
 URL:		http://xfce-goodies.berlios.de/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -44,10 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/panel-plugins/*.la
 
+%find_lang %{_name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{_name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
