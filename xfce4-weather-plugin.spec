@@ -11,6 +11,7 @@ Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.gz
 URL:		http://xfce-goodies.berlios.de/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pkgconfig
