@@ -2,21 +2,23 @@
 Summary:	A weather plugin for the Xfce panel
 Summary(pl):	Wtyczka panelu Xfce pokazuj±ca pogodê
 Name:		xfce4-weather-plugin
-Version:	0.4.9
+Version:	0.5.99.1
 Release:	1
-License:	BSD
+License:	GPL
 Group:		X11/Applications
-Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.gz
-# Source0-md5:	1d5ba253c8eae5a9ad5e3d7002a0dae0
-URL:		http://xfce-goodies.berlios.de/
+Source0:	http://goodies.xfce.org/releases/xfce4-weather-plugin/%{name}-%{version}.tar.bz2
+# Source0-md5:	dfc5b89a173b7da6fabe56bf73d41321
+URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.0
+BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
-BuildRequires:	xfce4-panel-devel >= 4.1.90
-Requires:	xfce4-panel >= 4.1.90
+BuildRequires:	xfce4-dev-tools >= 4.3.99.1
+BuildRequires:	xfce4-panel-devel >= 4.3.99.1
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +32,7 @@ Wtyczka dla panelu Xfce wy¶wietlaj±ca pogodê.
 
 %build
 %{__libtoolize}
-%{__aclocal} -I %{_datadir}/xfce4/m4
+%{__aclocal}
 %{__autoheader}
 %{__automake}
 %{__autoconf}
@@ -46,13 +48,21 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/panel-plugins/*.la
 
-%find_lang %{_name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{_name}.lang
+%post
+%update_icon_cache hicolor
+
+%postun
+%update_icon_cache hicolor
+
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
+%doc AUTHORS ChangeLog README
+%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/xfce4-weather-plugin
+%{_datadir}/xfce4/panel-plugins/weather.desktop
 %{_datadir}/xfce4/weather
+%{_iconsdir}/hicolor/*/*/xfce4-weather.png
