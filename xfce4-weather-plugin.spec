@@ -1,4 +1,3 @@
-%define		_name	xfce4-weather
 Summary:	A weather plugin for the Xfce panel
 Summary(pl):	Wtyczka panelu Xfce pokazuj±ca pogodê
 Name:		xfce4-weather-plugin
