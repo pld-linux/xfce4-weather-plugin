@@ -1,5 +1,5 @@
 Summary:	A weather plugin for the Xfce panel
-Summary(pl):	Wtyczka panelu Xfce pokazuj±ca pogodê
+Summary(pl.UTF-8):   Wtyczka panelu Xfce pokazujÄ…ca pogodÄ™
 Name:		xfce4-weather-plugin
 Version:	0.6.0
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A weather plugin for the Xfce panel.
 
-%description -l pl
-Wtyczka dla panelu Xfce wy¶wietlaj±ca pogodê.
+%description -l pl.UTF-8
+Wtyczka dla panelu Xfce wyÅ›wietlajÄ…ca pogodÄ™.
 
 %prep
 %setup -q
