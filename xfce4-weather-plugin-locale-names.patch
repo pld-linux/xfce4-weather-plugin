@@ -1,0 +1,19 @@
+diff -urN xfce4-weather-plugin-0.6.2/configure.in xfce4-weather-plugin-0.6.2.new/configure.in
+--- xfce4-weather-plugin-0.6.2/configure.in	2007-11-18 20:02:03.000000000 +0100
++++ xfce4-weather-plugin-0.6.2.new/configure.in	2007-12-07 20:13:27.000000000 +0100
+@@ -51,7 +51,7 @@
+ dnl ******************************
+ dnl *** Check for i18n support ***
+ dnl ******************************
+-XDT_I18N([ca cs de en_GB eu fi fr gl hu lt nb_NO nl pa pt_BR pt_PT sk sq ur zh_TW])
++XDT_I18N([ca cs de en_GB eu fi fr gl hu lt nb nl pa pt_BR pt sk sq ur zh_TW])
+ 
+ dnl ***********************************
+ dnl *** Check for required packages ***
+diff -urN xfce4-weather-plugin-0.6.2/po/LINGUAS xfce4-weather-plugin-0.6.2.new/po/LINGUAS
+--- xfce4-weather-plugin-0.6.2/po/LINGUAS	2007-11-18 20:02:02.000000000 +0100
++++ xfce4-weather-plugin-0.6.2.new/po/LINGUAS	2007-12-07 20:13:12.000000000 +0100
+@@ -1,2 +1,2 @@
+ # set of available languages (in alphabetic order)
+-ca cs de en_GB eu fi fr gl hu lt nb_NO nl pa pt_BR pt_PT sk sq ur zh_TW
++ca cs de en_GB eu fi fr gl hu lt nb nl pa pt_BR pt sk sq ur zh_TW
