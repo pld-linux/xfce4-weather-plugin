@@ -9,6 +9,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.7/%{na
 # Source0-md5:	b3436929dd94cdd8acc744c474cca5c4
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 BuildRequires:	gettext-devel
+BuildRequires:	intltool
 BuildRequires:	libxml2-devel >= 1:2.6.27
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
