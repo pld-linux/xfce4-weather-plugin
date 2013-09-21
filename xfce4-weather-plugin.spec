@@ -52,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/es
+%{__rm} -r $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libweather.la
 
 %find_lang %{name}
 
