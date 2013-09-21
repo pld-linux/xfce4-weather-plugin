@@ -68,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libweather.so
 %{_datadir}/xfce4/panel/plugins/weather.desktop
 %{_datadir}/xfce4/weather
