@@ -12,6 +12,7 @@ BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	intltool
+BuildRequires:	libsoup-devel >= 2.26.0
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	libxml2-devel >= 1:2.6.27
