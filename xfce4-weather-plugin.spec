@@ -7,7 +7,6 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.8/%{name}-%{version}.tar.bz2
 # Source0-md5:	755b33089c02afe88abb39253003a7f3
-Patch0:		%{name}-ui.patch
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
@@ -32,7 +31,6 @@ Wtyczka dla panelu Xfce wyświetlająca pogodę.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__intltoolize}
