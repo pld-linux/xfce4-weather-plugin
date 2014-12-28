@@ -10,7 +10,7 @@ Source0:	http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.8/%{na
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	intltool
 BuildRequires:	libsoup-devel >= 2.26.0
 BuildRequires:	libtool
